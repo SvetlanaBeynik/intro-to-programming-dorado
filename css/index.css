@@ -1,0 +1,49 @@
+@media all {
+    body {
+        background-color: rgb(229, 222, 243);
+        color: rgb(8, 4, 10);
+        font-family: "Sofia", sans-serif;
+        padding: 25px;
+        margin: 25px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 15px;
+        font-weight: 15px;
+        color: brown;
+    }
+
+    #experience {}
+
+    #skills {}
+
+    form[name="leave_message"] {
+        font-size: 35px;
+        color: rgb(2, 13, 13);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea[id="message"] {
+        width: 250px;
+        display: block;
+        /* margin-bottom: 10px; */
+        background-color: rgb(203, 233, 236);
+        color: blue;
+
+    }
+
+    #messages,
+    button[type="button"] {
+        color: rgb(165, 42, 42);
+    }
+
+    footer {
+        background-color: rgb(180, 228, 237);
+        color: rgb(74, 15, 161);
+        padding: 25px;
+        margin: 25px;
+    }
+}
