@@ -6,7 +6,7 @@ const copyright = document.createElement('p');
 copyright.textContent = 'Svetlana ' + thisYear;
 footer.appendChild(copyright);
 
-const skills = ["nice", "dance", "cooking"];
+const skills = ["Windows", "HTML", "CSS", "JS", "Git Hub", "VS Code"];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
 

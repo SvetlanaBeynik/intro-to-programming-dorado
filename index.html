@@ -9,18 +9,34 @@
 </head>
 
 <body>
+    <nav>
+        <h1>Menu</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
     <section>
         <div>Svetlana Beynik</div>
     </section>
     <section>
-        <h1>About</h1>
+
+        <h1><a id="about">About</a></h1>
         <p>My name is Svetlana.</p>
-        And i'm trying to become a developer.
+        I am a full time mom. And i'm trying to become a developer.
     </section>
+
 
     <section id="experience">
         <h2>Experience</h2>
-        I don't have a real real experience yet
+        <div class="flexbox-container">
+            <div class="flexbox-item flexbox-item">I started my coding jorney with Code Dream from september 2022 and I
+                am so happy to be the part of this. I don't have a real experience yet.</div>
+
+        </div>
+
+
     </section>
     <section id="skills">
         <h2>Skills</h2>
@@ -33,6 +49,10 @@
     </section>
     <section>
         <h2>Leave a Message</h2>
+        <div class="wrapper">
+            <div class="one">One</div>
+            <div class="two">Two</div>
+        </div>
         <form name="leave_message">
             <label for="name">Name</label>
             <input type="text" name="name" required> <br>
