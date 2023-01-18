@@ -34,11 +34,11 @@ messageForm.addEventListener('submit', (event) => {
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>${message}</span> </a>`;
     messageList.appendChild(newMessage);
-    removeButton = document.createElement('button')
+    removeButton = document.createElement('button');
     removeButton.innerText = `Remove`;
     removeButton.setAttribute("type", "button");
     removeButton.addEventListener('click', (event) => {
-        const entry = event.target.parentNode
+        const entry = event.target.parentNode;
         entry.remove();
     })
     newMessage.appendChild(removeButton);
