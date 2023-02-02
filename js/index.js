@@ -3,7 +3,7 @@ const thisYear = today.getFullYear()
 
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
-copyright.textContent = 'Svetlana ' + thisYear;
+copyright.innerHTML = `&copy; Svetlana Beinik ${thisYear}`
 footer.appendChild(copyright);
 
 const skills = ["Windows", "HTML", "CSS", "JS", "Git Hub", "VS Code"];
@@ -12,6 +12,7 @@ const skillsList = skillsSection.querySelector('ul');
 
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
+    skill.classList.add('tag')
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
@@ -28,22 +29,31 @@ messageForm.addEventListener('submit', (event) => {
     console.log(name);
     console.log(email);
     console.log(message);
+    const messageSection = document.querySelector("#messages");
+    const messageList = messageSection.querySelector('ul')
 
-    messageSection = document.querySelector("#messages");
-    messageList = messageSection.querySelector('ul');
+    if (messageSection.style.display === 'none') {
+        messageSection.style.display = 'block'
+    }
+
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>${message}</span> </a>`;
     messageList.appendChild(newMessage);
     removeButton = document.createElement('button');
     removeButton.innerText = `Remove`;
     removeButton.setAttribute("type", "button");
+    removeButton.setAttribute("id", "remove");
     removeButton.addEventListener('click', (event) => {
         const entry = event.target.parentNode;
+        const list = entry.parentNode
+
+        if (list.children.length <= 1) {
+            messageSection.style.display = 'none'
+        }
+
         entry.remove();
     })
     newMessage.appendChild(removeButton);
-    messageList.appendChild(newMessage);
-
     event.target.reset();
 })
 
@@ -65,6 +75,3 @@ fetch('https://api.github.com/users/SvetlanaBeynik/repos')
             projectList.appendChild(project);
         }
     })
-    .catch(function (err) {
-        // Error :(
-    });

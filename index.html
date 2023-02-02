@@ -9,70 +9,113 @@
 </head>
 
 <body>
-    <nav>
-        <h1>Menu</h1>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
-    </nav>
-    <section>
-        <div>Svetlana Beynik</div>
-    </section>
-    <section>
+    <div class="container">
+        <section>
+            <div class="flexbox-menu">
+                <ul>
+                    <li class="menu"><a href="#about">About</a></li>
+                    <li class="menu"><a href="#experience">Experience</a></li>
+                    <li class="menu"><a href="#skills">Skills</a></li>
+                    <li class="menu"><a href="#projects">Project</a></li>
+                    <li class="menu"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
 
-        <h1><a id="about">About</a></h1>
-        <p>My name is Svetlana.</p>
-        I am a full time mom. And i'm trying to become a developer.
-    </section>
+        </section>
+        <section>
+            <div class="box">
+                <ul>
+                    <li class="main"><img src="img/SV.png"></li>
+                    <li class="main">
+                        <a style="font-size:2.5">Svetlana Beinik</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- <div class="box">
+            <img src="img/SV.png">
+        </div> -->
+        <!-- <section>
+            <div>Svetlana Beynik</div>
+        </section> -->
+        <section>
+            <h1><a id="about">About</a></h1>
+            <p>My name is Svetlana.</p>
+            I am a full time mom. I started my coding jorney with Code Dream from september 2022 and I am so happy to be
+            the part of this. And i'm trying to become a developer.<br>
+            During this class, I learned a lot and now I do understand the connection between HTML, CSS, and JavaScript.
 
+            After this class, I'm not going to stop to learn and will try to do my best to become a better web
+            developer.
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="flexbox-container">
+                <div class="flexbox-item">
+                    <ul role="list">
+                        <li class="card">
+                            <span><strong>Student - Code The Dream</strong> &mdash;
+                            </span>
+                            <span class="emphasis">September 2022-2023</span>
+                        </li>
+                        <li class="card">
+                            <span><strong>Housewife and working mom</strong> &mdash;
+                            </span>
+                            <span class="emphasis">2010-2023</span>
+                        <li class="card">
+                            <span><strong>Manager - InterPotchta</strong> &mdash;
+                            </span>
+                            <span class="emphasis">2007-2012</span>
+                            <!-- <li>
+                            <span>Student - Code The Dream</span>
+                        </li>
+                        <li>
+                            <span>Housewife and working mom</span>
+                        </li>
+                        <li>
+                            <span>Manager - InterPotchta</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul role="list"></ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul></ul>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="flexbox-container">
-            <div class="flexbox-item flexbox-item">I started my coding jorney with Code Dream from september 2022 and I
-                am so happy to be the part of this. I don't have a real experience yet.</div>
-
-        </div>
-
-
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul></ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul></ul>
-
-    </section>
-    <section id="connect">
-        <h2>Connect</h2>
-        beynik.svetlana@gmail.com
-        223-322-223-322
-    </section>
-    <section>
-        <h2>Leave a Message</h2>
-        <div class="wrapper">
-            <div class="one">One</div>
-            <div class="two">Two</div>
-        </div>
-        <form name="leave_message">
-            <label for="name">Name</label>
-            <input type="text" name="name" required> <br>
-            <label for="email">Email</label>
-            <input type="email" name="email" required> <br>
-            <label for="message">Message</label> <br>
-            <textarea name="message" id="message" cols="30" rows="10" required></textarea> <br>
-            <button type="submit" id="submit" name="submit">Submit</button> <br>
-        </form>
-    </section>
-    <section id="messages">
-        <h2>Messages</h2>
-        <ul></ul>
-    </section>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            beynik.svetlana@gmail.com<br>
+            223-322-223-322
+        </section>
+        <section class="message_form">
+            <h2>Leave a Message</h2>
+            <!-- <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+            </div> -->
+            <form name="leave_message">
+                <div class="message_form">
+                    <label class="label" for="name">Name</label>
+                    <input class="input" type="text" name="name" required> <br>
+                </div>
+                <label class="label" for="email">Email Address</label>
+                <input class="input" type="email" name="email" required> <br>
+                <label class="label" for="message">Message</label> <br>
+                <textarea class="input" name="message" id="message" cols="30" rows="10" required></textarea> <br>
+                <button type="submit" id="submit" name="submit">Submit</button> <br>
+            </form>
+        </section>
+        <section id="messages" style="display:none">
+            <h2>Messages</h2>
+            <ul></ul>
+        </section>
+    </div>
     <footer>
         <div id="copyright"></div>
         <script src="js/index.js"></script>
