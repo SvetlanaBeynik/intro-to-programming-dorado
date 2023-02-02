@@ -48,20 +48,23 @@ messageForm.addEventListener('submit', (event) => {
 })
 
 
-var githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/SvetlanaBeynik/repos", true);
-githubRequest.send();
-githubRequest.onload = function () {
-    let repositories = JSON.parse(githubRequest.response);
-    console.log(repositories);
 
-    projectSection = document.querySelector("#projects");
-    projectList = projectSection.querySelector('ul');
 
-    for (let i = 0; i < repositories.length; i++) {
-        const project = document.createElement('li');
-        project.innerText = repositories[i]['name'];
-        projectList.appendChild(project);
-    }
-};
+fetch('https://api.github.com/users/SvetlanaBeynik/repos')
+    .then(res => res.json())
+    .then(function (data) {
+        let repositories = data;
+        console.log(repositories);
 
+        projectSection = document.querySelector("#projects");
+        projectList = projectSection.querySelector('ul');
+
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
+            project.innerText = repositories[i]['name'];
+            projectList.appendChild(project);
+        }
+    })
+    .catch(function (err) {
+        // Error :(
+    });
