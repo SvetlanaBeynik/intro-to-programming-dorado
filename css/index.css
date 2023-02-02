@@ -1,35 +1,68 @@
 @media all {
+
+    :root {
+        --color-medium: #808092;
+        --color-lighter: #f7f5f9;
+        --color-primary: #0072e0;
+        --rounded: 3px;
+        --rounded-full: 999px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .box {
+        background: url(../img/flowers.jpeg);
+    }
+
     body {
-        background-color: rgb(229, 222, 243);
-        color: rgb(8, 4, 10);
+        /* background-color: rgb(229, 222, 243);
+        color: rgb(8, 4, 10); */
         font-family: "Sofia", sans-serif;
         padding: 25px;
         margin: 25px;
+        background: url(../img/bg.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        line-height: 1.5;
+        font-size: 20px;
     }
 
     h1,
     h2,
     h3 {
-        font-size: 15px;
+        font-size: 25px;
         font-weight: 15px;
-        color: brown;
+        color: black;
+        /* color: #0072e0; */
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+    }
+
+    section {
+        padding: 1rem 0;
     }
 
     #experience {}
 
-    .flexbox-item {
+    /* .flexbox-item {
         width: 400px;
         margin: 10px;
-        border: 30px solid rgb(123, 215, 25);
-        background-color: rgb(123, 215, 25);
-    }
+        border: 30px solid rgb(229, 229, 229);
+        background-color: rgb(255, 255, 255);
+    } */
 
     #skills {}
 
     form[name="leave_message"] {
-        font-size: 35px;
+        font-size: 20px;
         color: rgb(2, 13, 13);
     }
+
 
     .wrapper {
         display: grid;
@@ -39,7 +72,7 @@
         /* background-color: rgb(198, 30, 130); */
     }
 
-    .one {
+    /* .one {
         grid-column: 1;
         grid-row: 1;
     }
@@ -47,7 +80,7 @@
     .two {
         grid-column: 2;
         grid-row: 1;
-    }
+    } */
 
     input[type="text"],
     input[type="email"],
@@ -55,20 +88,151 @@
         width: 250px;
         display: block;
         /* margin-bottom: 10px; */
-        background-color: rgb(203, 233, 236);
-        color: blue;
+        /* border-radius: 3px; */
+        border: 2px solid black;
+        color: rgb(213, 33, 33);
+        /* display: inline-block;
+        padding: 0.25rem 0.75rem;
+        margin-bottom: 0.5rem; */
+        background-color: white;
+        color: rgb(0, 0, 0);
 
+    }
+
+    input:focus,
+    input:focus,
+    textarea:focus {
+        outline: none !important;
+        border-color: #719ECE;
+        box-shadow: 0 0 10px #719ECE;
+    }
+
+    #submit {
+        background-color: var(--color-primary);
+        border-radius: var(--rounded);
+        color: white;
+        font-size: 20px;
+        min-width: 100px;
+        padding: 0.5rem 1rem;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    #remove {
+        background-color: rgb(248, 203, 119);
+        border-radius: var(--rounded);
+        color: black;
+        min-width: 100px;
+        padding: 0.5rem 1rem;
+        transition: opacity 0.2s ease-in-out;
     }
 
     #messages,
     button[type="button"] {
         color: rgb(165, 42, 42);
+
     }
 
     footer {
         background-color: rgb(180, 228, 237);
-        color: rgb(74, 15, 161);
+        /* color: rgb(74, 15, 161); */
         padding: 25px;
         margin: 25px;
+        color: var(--color-primary);
+        font-size: 30px;
+    }
+
+    .menu {
+        text-align: center;
+        text-indent: 50px;
+        color: var(--color-primary);
+        display: inline-block;
+        line-height: 1.5;
+        font-size: 25px;
+
+        /* text-decoration: none; */
+        /* max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+        align-items: center; */
+    }
+
+    .message_form {
+        display: block;
+        margin-bottom: 1rem;
+        max-width: 100%;
+        width: 100%;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    ul {
+        padding-left: 2em;
+    }
+
+    .container {
+        padding: 1rem 0;
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 100vw;
+    }
+
+    .message_form {
+        display: block;
+        margin-bottom: 1rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .label {
+        color: var(--color-dark);
+        font-size: 20px;
+        margin-bottom: 0.25rem;
+    }
+
+    .input {
+        /* padding: 0.25rem 0.5rem; */
+        padding: 0.35rem 0.7rem;
+        width: 100%;
+    }
+
+    .flexbox-menu {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+        /* font: bold italic 22px Times New Roman, serif; */
+        /* font-family: "Lucida Console", "Courier New", monospace; */
+        font-family: "Lucida Console", "Monaco", "serife";
+        font-size: 20px;
+        font-weight: 15px;
+    }
+
+    .main {
+        /* text-align: center; */
+        /* color: var(--color-primary); */
+        color: rgb(216, 209, 238);
+        display: inline-block;
+        font-size: 2.5em;
+    }
+
+    .box {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        border-radius: var(--rounded);
+        border: 2px solid var(--color-primary);
+        color: black;
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .tag:not(:last-child) {
+        margin-right: 0.5rem;
     }
 }
