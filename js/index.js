@@ -57,9 +57,6 @@ messageForm.addEventListener('submit', (event) => {
     event.target.reset();
 })
 
-
-
-
 fetch('https://api.github.com/users/SvetlanaBeynik/repos')
     .then(res => res.json())
     .then(function (data) {
@@ -71,7 +68,8 @@ fetch('https://api.github.com/users/SvetlanaBeynik/repos')
 
         for (let i = 0; i < repositories.length; i++) {
             const project = document.createElement('li');
-            project.innerText = repositories[i]['name'];
+            // project.innerText = repositories[i]['name'];
+            project.innerHTML = `<a class="link link--no-decor" href="${repositories[i].html_url}">${repositories[i].name}</a>`
             projectList.appendChild(project);
         }
     })
